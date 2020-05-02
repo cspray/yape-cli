@@ -1,0 +1,35 @@
+#!/usr/bin/env php
+<?php
+
+$cwd = getcwd();
+if (!file_exists($cwd . '/vendor/autoload.php')) {
+    echo 'Expected to find a vendor autoload but nothing was found';
+    exit(255);
+}
+
+require_once $cwd . '/vendor/autoload.php';
+
+use Cspray\Yape\Cli\CreateEnumCommand;
+use Cspray\Yape\Cli\CreateDbalTypeCommand;
+use Cspray\Yape\Cli\Internal\ApplicationConfiguration;
+use Cspray\Yape\Cli\Internal\EnumDefinitionFactory;
+use Cspray\Yape\Cli\Internal\DbalTypeDefinitionFactory;
+use Cspray\Yape\Cli\Internal\TemplateEnumCodeGenerator;
+use Cspray\Yape\Cli\Internal\TemplateDbalTypeCodeGenerator;
+use Symfony\Component\Console\Application;
+
+$app = new Application();
+
+$app->setName('yape Enum Generator');
+$app->setVersion('2.0.0-rc2');
+
+$templateEnumCodeGenerator = new TemplateEnumCodeGenerator();
+$templateDbalTypeCodeGenerator = new TemplateDbalTypeCodeGenerator();
+$config = new ApplicationConfiguration(getcwd(), 'src/Enums', 'src/Doctrine');
+
+$createEnumCommand = new CreateEnumCommand($templateEnumCodeGenerator, new EnumDefinitionFactory(), $config);
+$createDbalTypeCommand = new CreateDbalTypeCommand($templateDbalTypeCodeGenerator, new DbalTypeDefinitionFactory(), $config);
+$app->add($createEnumCommand);
+$app->add($createDbalTypeCommand);
+
+$app->run();

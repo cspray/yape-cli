@@ -1,0 +1,39 @@
+{
+  "name": "cspray/yape-cli",
+  "description": "A Symfony Console tool to help autogenerate your yape Enums.",
+  "keywords": ["enum"],
+  "homepage": "https://cspray.io/yape",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Charles Sprayberry",
+      "email": "yape@cspray.io",
+      "homepage": "http://cspray.io",
+      "role": "Developer"
+    }
+  ],
+  "bin": [
+    "./bin/yape"
+  ],
+  "require": {
+    "php": "^7.2",
+    "cspray/yape": "dev-master",
+    "symfony/console": "^5"
+  },
+  "require-dev": {
+    "doctrine/dbal": "^2.9",
+    "phpunit/phpunit": "^8",
+    "mikey179/vfsstream": "^1.6",
+    "cspray/yape-dbal": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "Cspray\\Yape\\Cli\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Cspray\\Yape\\Cli\\": "test/"
+    }
+  }
+}
