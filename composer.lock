@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2414ea9514ee8e83ffc44d5217b44a10",
+    "content-hash": "c8dba84c1d2a872e61bc8e86dfd2a6f9",
     "packages": [
         {
             "name": "cspray/yape",
-            "version": "dev-master",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cspray/yape.git",
-                "reference": "96f0f1c73f70d6bb5a1836ec307c21b3682b746d"
+                "reference": "a94ebfeeffdb8ec28dd24847029828578aa91628"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cspray/yape/zipball/96f0f1c73f70d6bb5a1836ec307c21b3682b746d",
-                "reference": "96f0f1c73f70d6bb5a1836ec307c21b3682b746d",
+                "url": "https://api.github.com/repos/cspray/yape/zipball/a94ebfeeffdb8ec28dd24847029828578aa91628",
+                "reference": "a94ebfeeffdb8ec28dd24847029828578aa91628",
                 "shasum": ""
             },
             "require": {
@@ -53,7 +53,7 @@
             "keywords": [
                 "enum"
             ],
-            "time": "2020-05-02T14:11:40+00:00"
+            "time": "2020-05-02T15:21:44+00:00"
         },
         {
             "name": "psr/container",
@@ -401,20 +401,20 @@
     "packages-dev": [
         {
             "name": "cspray/yape-dbal",
-            "version": "dev-master",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cspray/yape-dbal.git",
-                "reference": "96b743c1dd50d809d936bfc504bb9464d48cab8d"
+                "reference": "a86e6ab1ad76cf90ab79d285420b6e475412595f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cspray/yape-dbal/zipball/96b743c1dd50d809d936bfc504bb9464d48cab8d",
-                "reference": "96b743c1dd50d809d936bfc504bb9464d48cab8d",
+                "url": "https://api.github.com/repos/cspray/yape-dbal/zipball/a86e6ab1ad76cf90ab79d285420b6e475412595f",
+                "reference": "a86e6ab1ad76cf90ab79d285420b6e475412595f",
                 "shasum": ""
             },
             "require": {
-                "cspray/yape": "dev-master",
+                "cspray/yape": "^3.0",
                 "doctrine/dbal": "^2.9",
                 "php": "^7.2"
             },
@@ -446,7 +446,7 @@
                 "doctrine",
                 "enum"
             ],
-            "time": "2020-05-02T15:00:50+00:00"
+            "time": "2020-05-02T15:29:52+00:00"
         },
         {
             "name": "doctrine/cache",
@@ -2300,10 +2300,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "cspray/yape": 20,
-        "cspray/yape-dbal": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
